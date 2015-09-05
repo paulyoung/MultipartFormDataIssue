@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let identifier = NSUUID().UUIDString
+        let configuration = NSURLSessionConfiguration.backgroundSessionConfigurationWithIdentifier(identifier)
+        
+        let manager = Alamofire.Manager(configuration: configuration)
+        
+        manager.upload(
+            .POST,
+            "http://httpbin.org/post",
+            headers: [
+                "Accept-Encoding": "gzip, deflate"
+            ],
+            multipartFormData: { multipartFormData in
+                if let data = "bar".dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true) {
+                    multipartFormData.appendBodyPart(data: data, name: "foo")
+                }
+            },
+            encodingCompletion: { encodingResult in
+                switch encodingResult {
+                case .Success(let upload, _, _):
+                    upload.responseJSON { request, response, JSON, error in
+                        println(JSON)
+                    }
+                case .Failure(let encodingError):
+                    println(encodingError)
+                }
+            }
+        )
         return true
     }
 
