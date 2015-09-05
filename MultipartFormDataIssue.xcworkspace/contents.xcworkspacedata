@@ -4,4 +4,7 @@
    <FileRef
       location = "group:MultipartFormDataIssue.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/Alamofire/Alamofire.xcodeproj">
+   </FileRef>
 </Workspace>

@@ -13,6 +13,8 @@
 		2C8E7E7D1B9ADD7800504599 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C8E7E7C1B9ADD7800504599 /* Images.xcassets */; };
 		2C8E7E801B9ADD7800504599 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C8E7E7E1B9ADD7800504599 /* LaunchScreen.xib */; };
 		2C8E7E8C1B9ADD7800504599 /* MultipartFormDataIssueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8E7E8B1B9ADD7800504599 /* MultipartFormDataIssueTests.swift */; };
+		2C8E7E961B9ADF6900504599 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8E7E951B9ADF6900504599 /* Alamofire.framework */; };
+		2C8E7E981B9ADF9C00504599 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2C8E7E951B9ADF6900504599 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +27,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2C8E7E971B9ADF8A00504599 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2C8E7E981B9ADF9C00504599 /* Alamofire.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		2C8E7E701B9ADD7800504599 /* MultipartFormDataIssue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultipartFormDataIssue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C8E7E741B9ADD7800504599 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,6 +51,7 @@
 		2C8E7E851B9ADD7800504599 /* MultipartFormDataIssueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultipartFormDataIssueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C8E7E8A1B9ADD7800504599 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C8E7E8B1B9ADD7800504599 /* MultipartFormDataIssueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipartFormDataIssueTests.swift; sourceTree = "<group>"; };
+		2C8E7E951B9ADF6900504599 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C8E7E961B9ADF6900504599 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				2C8E7E741B9ADD7800504599 /* Info.plist */,
+				2C8E7E951B9ADF6900504599 /* Alamofire.framework */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -122,6 +140,7 @@
 				2C8E7E6C1B9ADD7800504599 /* Sources */,
 				2C8E7E6D1B9ADD7800504599 /* Frameworks */,
 				2C8E7E6E1B9ADD7800504599 /* Resources */,
+				2C8E7E971B9ADF8A00504599 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -411,6 +430,7 @@
 				2C8E7E911B9ADD7800504599 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C8E7E921B9ADD7800504599 /* Build configuration list for PBXNativeTarget "MultipartFormDataIssueTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +439,7 @@
 				2C8E7E941B9ADD7800504599 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
